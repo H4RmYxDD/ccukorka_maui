@@ -5,11 +5,11 @@
     <CollectionView ItemsSource="{Binding Products}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Grid Padding="10">
+                <VerticalStackLayout Padding="10">
                     <Label Text="{Binding Name}" FontAttributes="Bold"/>
                     <Label Text="{Binding Price}" Grid.Column="1"/>
                     <Label Text="{Binding Quantity}" Grid.Column="2"/>
-                </Grid>
+                </VerticalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

@@ -70,6 +70,9 @@
 	  <Compile Update="Views\EditPage.xaml.cs">
 	    <DependentUpon>EditPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\CreateCandyPage.xaml.cs">
+	    <DependentUpon>CreateCandyPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -77,6 +80,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EditPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CreateCandyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ReportPage.xaml">

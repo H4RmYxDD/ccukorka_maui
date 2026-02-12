@@ -1,0 +1,13 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.CreateCandyPage"
+             Title="Create Candy">
+
+    <StackLayout Padding="20">
+        <Entry Placeholder="Candy Name" Text="{Binding Name}" />
+        <Entry Placeholder="Price" Text="{Binding Price}" Keyboard="Numeric"/>
+        <Entry Placeholder="Quantity" Text="{Binding Quantity}" Keyboard="Numeric"/>
+        <Button Text="Create Candy" Command="{Binding CreateCandyCommand}" />
+    </StackLayout>
+
+</ContentPage>

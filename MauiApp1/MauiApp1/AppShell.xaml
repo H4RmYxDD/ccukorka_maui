@@ -11,6 +11,10 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     <ShellContent
+Title="CreateCandy"
+ContentTemplate="{DataTemplate local:CreateCandyPage}"
+Route="CreateCandy" />
+    <ShellContent
     Title="Create"
     ContentTemplate="{DataTemplate local:CreatePage}"
     Route="CreatePage" />

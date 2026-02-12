@@ -6,9 +6,9 @@ namespace MauiApp1.Services
     public class FileService
     {
         private static readonly string ProductsFile =
-            Path.Combine(AppContext.BaseDirectory, "candy.csv");
+            Path.Combine(AppContext.BaseDirectory, "C:\\Users\\b1harbal\\Source\\Repos\\ccukorka_maui\\MauiApp1\\MauiApp1\\candy.csv");
         private static readonly string OrdersFile =
-            Path.Combine(AppContext.BaseDirectory, "orders.csv");
+            Path.Combine(AppContext.BaseDirectory, "C:\\Users\\b1harbal\\Source\\Repos\\ccukorka_maui\\MauiApp1\\MauiApp1\\reports.csv");
 
         public static Data Betoltes()
         {
