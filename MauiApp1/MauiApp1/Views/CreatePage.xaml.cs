@@ -8,6 +8,5 @@ public partial class CreatePage : ContentPage
 	{
 		InitializeComponent();
         BindingContext = new CreatePageViewModel();
-
     }
 }

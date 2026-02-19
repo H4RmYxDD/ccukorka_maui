@@ -9,6 +9,7 @@
                     <Label Text="{Binding Name}" FontAttributes="Bold"/>
                     <Label Text="{Binding Price}" Grid.Column="1"/>
                     <Label Text="{Binding Quantity}" Grid.Column="2"/>
+                    <Button Text="Edit" Clicked="OnButtonClicked"/>
                 </VerticalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>

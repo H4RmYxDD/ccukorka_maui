@@ -3,10 +3,10 @@
              x:Class="MauiApp1.Views.CreatePage"
              Title="Create Order">
     <StackLayout Padding="20">
-        <Entry Placeholder="Name" Text="{Binding Name}" />
-        <Entry Placeholder="Quantity" Text="{Binding Quantity}" Keyboard="Numeric"/>
-        <Entry Placeholder="Price" Text="{Binding Price}" Keyboard="Numeric"/>
-        <Entry Placeholder="Sale Price" Text="{Binding SalePrice}" Keyboard="Numeric"/>
+        <Entry Placeholder="Name" Text="{Binding Order.Name}"/>
+        <Entry Placeholder="Quantity" Text="{Binding Order.Quantity}" Keyboard="Numeric"/>
+        <Entry Placeholder="Price" Text="{Binding Order.Price}" Keyboard="Numeric"/>
+        <Entry Placeholder="Sale Price" Text="{Binding Order.SalePrice}" Keyboard="Numeric"/>
         <Button Text="Create" Command="{Binding CreateCommand}" />
     </StackLayout>
 </ContentPage>

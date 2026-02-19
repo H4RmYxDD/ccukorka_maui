@@ -1,24 +1,37 @@
 using MauiApp1.Models;
-using System.Windows.Input;
 using MauiApp1.Services;
+using System.ComponentModel;
+using System.Windows.Input;
 
-namespace MauiApp1.ViewModels
+public class CreatePageViewModel : INotifyPropertyChanged
 {
-    public class CreatePageViewModel
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged(string name)
+        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+
+    private Listing _order = new Listing();
+    public Listing Order
     {
-        public Listing Order { get; set; } = new Listing { Name = "", Quantity = 0, Price = 0, SalePrice = 0.0 };
-        public ICommand CreateCommand { get; }
-
-        public CreatePageViewModel()
+        get => _order;
+        set
         {
-            CreateCommand = new Command(Create);
+            _order = value;
+            OnPropertyChanged(nameof(Order));
         }
+    }
 
-        private void Create()
-        {
-            var data = FileService.Betoltes();
-            data.Orders.Add(Order);
-            FileService.Mentes(data);
-        }
+    public ICommand CreateCommand { get; }
+
+    public CreatePageViewModel()
+    {
+        CreateCommand = new Command(Create);
+    }
+
+    private void Create()
+    {
+        var data = FileService.Betoltes();
+        data.Orders.Add(Order);
+        FileService.Mentes(data);
     }
 }

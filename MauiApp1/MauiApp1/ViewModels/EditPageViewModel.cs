@@ -15,17 +15,22 @@ namespace MauiApp1.ViewModels
             SaveCommand = new Command(Save);
         }
 
-        private void Save()
+        private async void Save()
         {
             var data = FileService.Betoltes();
-            var existing = data.Orders.FirstOrDefault(o => o.Name == Order.Name);
+            var existing = data.Orders.FirstOrDefault(o => o.Id == Order.Id);
+
             if (existing != null)
             {
                 existing.Quantity = Order.Quantity;
                 existing.Price = Order.Price;
                 existing.SalePrice = Order.SalePrice;
+
                 FileService.Mentes(data);
             }
+
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
+
     }
 }

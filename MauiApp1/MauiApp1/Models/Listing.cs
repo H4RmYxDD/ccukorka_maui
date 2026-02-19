@@ -8,7 +8,8 @@ namespace MauiApp1.Models
 {
     public class Listing
     {
-        public required string Name { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
+        public string Name { get; set; }
         public int Quantity { get; set; }
         public int Price { get; set; }
         public double SalePrice { get; set; }
